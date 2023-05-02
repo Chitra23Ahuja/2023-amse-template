@@ -5,7 +5,7 @@
 This projects analyzes the availability and usage of electric vehicle charging stations in Germany.
 
 ## Rationale
-The analysis provides output that includes comprehensive database of electric vehicle charging stations in Germany, reports on descriptive and spatial analysis, usage patterns, and a predictive model of charging station demand in different regions.
+The analysis provides output that includes comprehensive database of electric vehicle charging stations in Germany, reports on descriptive and usage patterns, and a predictive model of charging station demand in different regions.
 
 ## Datasources
 
@@ -24,7 +24,6 @@ The static data represent the charging facilities of all operators who have comp
 ## Work Packages
 1.  Data Cleaning and Integration
 2.	Descriptive Analysis
-3.	Spatial Analysis
 4.	Usage Analysis
-5.	Predictive Modeling
-6.	Recommendations
+6.	Predictive Modeling
+7.	Recommendations
