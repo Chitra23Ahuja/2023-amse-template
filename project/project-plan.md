@@ -28,10 +28,3 @@ The static data represent the charging facilities of all operators who have comp
 4.	Usage Analysis
 5.	Predictive Modeling
 6.	Recommendations
-
-
-
-1. Example Issue [#1][i1]
-2. ...
-
-[i1]: https://github.com/jvalue/2023-amse-template/issues/1
