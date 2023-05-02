@@ -2,7 +2,7 @@
 
 ## Summary
 
-This projects analyzes the availability and Usage of electric vehicle charging stations in Germany.
+This projects analyzes the availability and usage of electric vehicle charging stations in Germany.
 
 ## Rationale
 The analysis provides output that includes comprehensive database of electric vehicle charging stations in Germany, reports on descriptive and spatial analysis, usage patterns, and a predictive model of charging station demand in different regions.
