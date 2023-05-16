@@ -1,42 +1,21 @@
-import sqlite3
-import requests
 import pandas as pd
+import csv
+import sqlite3
 
-# Define the URL of the data source
-data_url = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-kreis-neuss-ladesaulen-in-deutschland/exports/csv"
 
-# Function to pull data from the source
-def pull_data(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.content
-    else:
-        raise Exception("Failed to retrieve data from the source.")
+csv_url = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-kreis-neuss-ladesaulen-in-deutschland/exports/csv"
+excel_url = "https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Energie/Unternehmen_Institutionen/E_Mobilitaet/Ladesaeulenregister.xlsx?__blob=publicationFile&v=21"
 
-# Function to perform data transformations
-def transform_data(data):
-    df = pd.read_csv(data)  # Assuming the data is in CSV format
-    # Perform any necessary data transformations
-    df["transformed_column"] = df["original_column"] * 2
-    return df
+connection = sqlite3.connect('AMSE_database.db')
+csv_df = pd.read_csv(csv_url, delimiter=';', encoding='latin-1')
+excel_df = pd.read_excel(excel_url, skiprows=10)
 
-# Function to store data as an SQLite database
-def store_data(df, db_path):
-    conn = sqlite3.connect(db_path)
-    df.to_sql("data_table", conn, if_exists="replace", index=False)
-    conn.close()
+csv_df.to_sql("E-charging stations", connection, if_exists='replace', index=False)
+excel_df.to_sql("E-Ladesäulenregister", connection, if_exists='replace', index=False)
+print("CSV Data:")
+print(csv_df)
+print("\nExcel Data:")
+print(excel_df)
 
-# Main script
-if __name__ == "__main__":
-    # Pull data from the source
-    data = pull_data(data_url)
-    
-    # Perform data transformations
-    transformed_data = transform_data(data)
-    
-    # Define the path to the SQLite database
-    db_path = "./data/data.db"
-    
-    # Store the processed data as an SQLite database
-    store_data(transformed_data, db_path)
-
+connection.commit()
+connection.close()
