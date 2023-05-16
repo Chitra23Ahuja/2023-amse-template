@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # Define the URL of the data source
-data_url = ""
+data_url = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-kreis-neuss-ladesaulen-in-deutschland/exports/csv"
 
 # Function to pull data from the source
 def pull_data(url):
