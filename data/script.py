@@ -12,10 +12,6 @@ excel_df = pd.read_excel(excel_url, skiprows=10)
 
 csv_df.to_sql("E-charging stations", connection, if_exists='replace', index=False)
 excel_df.to_sql("E-Ladesäulenregister", connection, if_exists='replace', index=False)
-print("CSV Data:")
-print(csv_df)
-print("\nExcel Data:")
-print(excel_df)
 
 connection.commit()
 connection.close()
