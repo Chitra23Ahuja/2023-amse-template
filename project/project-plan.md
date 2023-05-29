@@ -22,8 +22,10 @@ The data of the charging station map of the Federal Network Agency.Federal Netwo
 The static data represent the charging facilities of all operators who have completed the notification procedure of the Federal Network Agency and have consented to publication on the Internet.
 
 ## Work Packages
-1.  Data Cleaning and Integration
-2.	Descriptive Analysis
-4.	Usage Analysis
-6.	Predictive Modeling
-7.	Recommendations
+1.  Data Acquistion
+2.  Automated Data pipeline
+4.	Exploratory Analysis
+5.	Automated testing
+6.	Implement Continuous Integration
+7.	Deploy the project 
+8.  Documentation
