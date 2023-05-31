@@ -6,19 +6,22 @@ excel_url = "https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiet
 
 connection = sqlite3.connect('AMSE_database.sqlite')
 
+# load the data
 csv_df = pd.read_csv(csv_url, delimiter=';', encoding='latin-1')
 excel_df = pd.read_excel(excel_url, skiprows=10)
 
+# Cleaning the data
 excel_df.fillna(0, inplace=True)
 csv_df.fillna(0, inplace=True)
+
+# Data transformation
 new_columns = [column.lower().replace(' ', '_') for column in excel_df.columns]
 excel_df.columns = new_columns
-
 excel_df.rename(mapper={'straße': 'strasse'}, axis=1, inplace=True)
 excel_df.rename(mapper={'anzahl ladepunkte': 'anzahl_ladepunkte	'}, axis=1, inplace=True)
 
 # Save the DataFrame to a SQL database
-csv_df.to_sql("e_charging stations", connection, if_exists='replace', index=False)
+csv_df.to_sql("e_charging_stations", connection, if_exists='replace', index=False)
 excel_df.to_sql("e_ladesäulenregister", connection, if_exists='replace', index=False)
 
 connection.commit()
