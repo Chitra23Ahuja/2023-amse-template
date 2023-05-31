@@ -45,10 +45,9 @@ def test_dataframe_columns():
 
 def test_output_exists():
     #Test if data is safed in database sqlite after transformations
-    directory_path = os.path.join(os.getcwd(), '/Users/chitraahuja/Desktop/2023-amse-template/data') # get directory path
+    directory_path = os.getcwd()# get directory path
     print(directory_path)
-    assert os.path.exists(os.path.join(directory_path,"e_charging_stations.sqlite"))
-    assert os.path.exists(os.path.join(directory_path,"e_ladesäulenregister.sqlite"))
+    assert os.path.exists(os.path.join(directory_path,"AMSE_database.sqlite"))
 
 def test_pipeline():
     #Test if pipeline is executed properly
