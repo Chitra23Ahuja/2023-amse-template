@@ -33,6 +33,7 @@ jobs:
         pip install pytest
         pip install pandas
         pip install sqlalchemy
+        pip install openpyxl
         
     # Run Code Format check
 
