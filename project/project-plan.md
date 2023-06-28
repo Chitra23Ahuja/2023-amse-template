@@ -1,8 +1,14 @@
 # Project Plan
 
 ## Summary
+This projects analyzes the availability and usage of electric vehicle charging stations in Germany by answering following questions:
 
-This projects analyzes the availability and usage of electric vehicle charging stations in Germany.
+1. Regions with the highest number of charging stations
+2. Top 10 cities with the highest number of charging stations
+3. Average power capacity of charging stations
+4. Average power capacity of charging stations by region
+5. Distribution of charging station types
+6. Number of charging stations per operator
 
 ## Rationale
 The analysis provides output that includes comprehensive database of electric vehicle charging stations in Germany, reports on descriptive and usage patterns, and a predictive model of charging station demand in different regions.
