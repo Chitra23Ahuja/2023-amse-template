@@ -11,7 +11,7 @@ This projects analyzes the availability and usage of electric vehicle charging s
 6. Number of charging stations per operator
 
 ## Rationale
-The analysis provides output that includes comprehensive database of electric vehicle charging stations in Germany, reports on descriptive and usage patterns, and a predictive model of charging station demand in different regions.
+The analysis provides output that includes comprehensive database of electric vehicle charging stations in Germany, reports on descriptive and usage patterns, trends of charging station demand in different regions.
 
 ## Datasources
 

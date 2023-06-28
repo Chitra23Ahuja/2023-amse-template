@@ -6,9 +6,9 @@ Before you begin, make sure you have [Python](https://www.python.org/) and [Jayv
 ## Project Setup
 The following files are part of this template repository as examples and should be **replaced by you** over the semester:
 
-- `data.sqlite`: Your final, cleaned dataset. You will create an automated data pipeline that creates this SQLite database from multiple open data sources. The template repository includes data about train stations in germany, you need to replace this with your data!
+- `AMSE_database.sqlite`: Your final, cleaned dataset. You will create an automated data pipeline that creates this SQLite database from multiple open data sources. The template repository includes datasources about e-charging stations in germany of 2 datasources Germany: E-charging stations and  E-Ladesäulenregister.
 - `exploration.ipynb`: A Jupyter notebook that you can use to explore your data and show in detail what it looks like. You can refer to this file in your report for users that want more information about your data.
-- `report.ipynb`: Your final report as a Jupyter notebook. This is the result of your project work and should lead with a question that you want to answer using open data. The content of the report should answer the question, ideally using fitting visualizations, based on the data in `data.sqlite`.
+- `report.ipynb`: Your final report as a Jupyter notebook. This is the result of your project work and should lead with a question that you want to answer using open data. The content of the report should answer the question, ideally using fitting visualizations, based on the data in `AMSE_database.sqlite`.
 
 
 ## Exercises
@@ -36,4 +36,20 @@ Grading Exercise 1
 	By category:
 		Shape: 4 of 4
 		Types: 13 of 13
+		
+Grading Exercise 2
+	Overall points 24 of 24
+	---
+	By category:
+		Shape: 5 of 5
+		Types: 17 of 17
+		Quality: 2 of 2
+
+Grading Exercise 3
+	Overall points 22 of 22
+	---
+	By category:
+		Shape: 4 of 4
+		Types: 14 of 14
+		Quality: 4 of 4
 ```
