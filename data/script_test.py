@@ -11,7 +11,7 @@ def test_data_load():
 def test_dataframe_shape():
     #Test if shape of dataframes is correct
     csv_df_expected_shape = (36770, 20) 
-    excel_df_expected_shape = (42995, 26) 
+    excel_df_expected_shape = (44227, 26) 
 
     csv_df_actual_shape = script.csv_df.shape 
     excel_df_actual_shape = script.excel_df.shape 
@@ -26,14 +26,18 @@ def test_dataframe_shape():
 def test_dataframe_columns():
     #Test if columns of dataframes are correct
 
-    csv_df_expected_columns = ['betreiber','art_der_ladeeinrichung','anzahl_ladepunkte','anschlussleistung','steckertypen1','steckertypen2','steckertypen3','steckertypen4','p1_kw','p2_kw','p3_kw','p4_kw','kreis_kreisfreie_stadt','ort','postleitzahl','strasse','hausnummer','adresszusatz','inbetriebnahmedatum','koordinaten'] # expected columns of dataframe 1
+    csv_df_expected_columns = ['betreiber', 'art_der_ladeeinrichung', 'anzahl_ladepunkte',
+       'anschlussleistung', 'steckertypen1', 'steckertypen2', 'steckertypen3',
+       'steckertypen4', 'p1_kw', 'p2_kw', 'p3_kw', 'p4_kw',
+       'kreis_kreisfreie_stadt', 'ort', 'postleitzahl', 'strasse',
+       'hausnummer', 'adresszusatz', 'inbetriebnahmedatum', 'koordinaten']
     excel_df_expected_columns = ['betreiber', 'strasse', 'hausnummer', 'adresszusatz', 'postleitzahl',
-       'ort', 'bundesland', 'kreis/kreisfreie_stadt', 'breitengrad',
-       'längengrad', 'inbetriebnahmedatum', 'anschlussleistung',
-       'art_der_ladeeinrichung', 'anzahl_ladepunkte', 'steckertypen1',
-       'p1_[kw]', 'public_key1', 'steckertypen2', 'p2_[kw]', 'public_key2',
-       'steckertypen3', 'p3_[kw]', 'public_key3', 'steckertypen4', 'p4_[kw]',
-       'public_key4'] 
+       'ort', 'bundesland', 'kreis_kreisfreie_stadt', 'breitengrad',
+       'längengrad', 'inbetriebnahmedatum',
+       'nennleistung_ladeeinrichtung_[kw]', 'art_der_ladeeinrichung',
+       'anzahl_ladepunkte', 'steckertypen1', 'p1_[kw]', 'public_key1',
+       'steckertypen2', 'p2_[kw]', 'public_key2', 'steckertypen3', 'p3_[kw]',
+       'public_key3', 'steckertypen4', 'p4_[kw]', 'public_key4'] 
        
     csv_df_actual_columns = script.csv_df.columns
     excel_df_actual_columns = script.excel_df.columns 
